@@ -1,18 +1,20 @@
-<h1>{{ getName() }}</h1>
+<h1>{{ name() }}</h1>
 
 <dl>
   <td>Nombre:</td>
-  <dd>{{ getName() }}</dd>
+  <dd>{{ name() }}</dd>
 
   <td>Edad:</td>
-  <dd>{{ getAge() }}</dd>
+  <dd>{{ age() }}</dd>
 
   <td>Método:</td>
-  <dd>{{ getHeroDescription() }}</dd>
+  <dd>{{ heroDescription() }}</dd>
 
   <td>Capitalizado:</td>
   <!-- ! Intentar  -->
-  <dd> {{ getName().toUpperCase() }} </dd>
+  <dd> {{ capitalizedName()}} </dd>
+  <!-- Pipes -->
+  <dd> {{ name() | uppercase}} </dd>
 </dl>
 
 <button (click)="changeHero()" class="btn btn-primary mx-2">
