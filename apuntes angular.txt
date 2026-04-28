@@ -1,0 +1,2 @@
+npx @angular/cli@19 new 02-bases /// para hacer un proyecto con angular y la versión que sea.
+ng new bases /// para hacer un proyecto con la versión más reciente.
