@@ -1,10 +1,13 @@
-import { Component, input } from '@angular/core';
+import {Component, input} from '@angular/core';
+import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'gif-list-item',
-  imports: [],
+  imports: [
+    NgOptimizedImage
+  ],
   templateUrl: './gif-list-item.component.html',
 })
 export class GifListItemComponent {
-  imageUrl = input.required<string>();
+  image = input.required<string>();
 }
