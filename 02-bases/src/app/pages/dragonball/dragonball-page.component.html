@@ -1,0 +1,51 @@
+<h1>dragonball-page works!</h1>
+<hr>
+
+<section class="row">
+
+  <div class="col-12 col-sm-6">
+    <h3>Agregar:</h3>
+    <input #txtName
+           (change)="name.set(txtName.value)"
+           [value]="name()"
+           class="form-control"
+           placeholder="Nombre"
+           type="text"
+    />
+    <input #pwrName
+           (change)="power.set(pwrName.valueAsNumber)"
+           [value]="power()"
+           class="form-control mt-2"
+           placeholder="Numero"
+           type="number"
+    />
+
+    <button
+      (click)="addCharacter()"
+      class="mt-2 btn btn-primary"
+    >
+      Agregar {{ name() }}
+    </button>
+  </div>
+
+  <div class="col-12 col-sm-6">
+    <h3>Listado</h3>
+    <ul>
+      @for (character of characters(); track character.id; let idx = $index) {
+        @if (character.power > 500) {
+          <li>
+          <span>
+          {{ character.id }} - {{ character.name }}
+          </span>
+            <!--<strong [ngClass]="powerClasses()">-->
+            <strong [class.text-danger]="character.power > 9000">
+              ({{ character.power }})
+            </strong>
+          </li>
+        } @else {
+          <li><strong>{{ character.name }} es muy débil</strong></li>
+        }
+      }
+    </ul>
+  </div>
+</section>
