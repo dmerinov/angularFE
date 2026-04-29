@@ -17,5 +17,11 @@ export class CharacterAddComponent {
 
     const newCharacter: Character = {id: Math.random(), name: this.name(), power: this.power()}
     this.newCharacter.emit(newCharacter)
+    this.resetFields()
+  }
+
+  resetFields() {
+    this.name.set('');
+    this.power.set(0);
   }
 }
