@@ -4,6 +4,8 @@ export const environment = {
   companyName2: 'App',
   companySlogan: 'Maneja tus gifs',
 
-  // URLS
-  BASE_URL: 'https://api.thecatapi.com/v1',
+  // ApiKeys
+  // https://developers.giphy.com/dashboard/
+  giphyApiKey: '',
+  giphyUrl: 'https://api.giphy.com/v1',
 };

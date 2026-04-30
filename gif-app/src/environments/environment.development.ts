@@ -4,7 +4,6 @@ export const environment = {
   companyName2: 'App',
   companySlogan: 'Maneja tus gifs',
 
-  // ApiKeys
-
   // URLS
+  BASE_URL: 'https://api.thecatapi.com/v1/',
 };
